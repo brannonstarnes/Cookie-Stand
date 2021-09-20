@@ -35,10 +35,7 @@ let seattleStore = {
   cookiesPerHour: function () {
     this.custPerHour();
     let cookiesBought = Math.ceil(customers * this.avgPurchase);
-    for (let i = 0; i < hoursOfOperation.length; i++) {
-      this.totalCookies = cookiesBought + this.totalCookies;
-    }
-    console.log(this.totalCookies);
+    this.totalCookies = cookiesBought + this.totalCookies;
     return cookiesBought;
   },
   simSales: function () {
@@ -52,7 +49,8 @@ let seattleStore = {
   displaySales: function () {
     this.simSales();
     let storeTitle = document.createElement("h2");
-    storeTitle.textContent = "Seattle Store";
+    storeTitle.innerText = "Seattle Store";
+    mainEl.appendChild(storeTitle);
     let newList = document.createElement("ul");
     for (let i = 0; i < this.hourlySales.length; i++) {
       let newItem = document.createElement("li");
@@ -62,7 +60,8 @@ let seattleStore = {
     }
     mainEl.appendChild(newList);
     let sumCookies = document.createElement("li");
-    sumCookies.textContent = "Total: " + mainEl.appendChild(this.totalCookies);
+    sumCookies.innerText = "Total: " + this.totalCookies + " cookies";
+    newList.appendChild(sumCookies);
   },
 };
 
