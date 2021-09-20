@@ -1,15 +1,21 @@
 "use strict";
 
 //create objects for stores
-
+let customers = 0;
 let seattleStore = {
   minCustomer: 23,
   maxCustomer: 65,
   avgPurchase: 6.3,
   custPerHour: function () {
-    return Math.floor(
+    customers = Math.floor(
       Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer
     );
+    return customers;
+  },
+  cookiesPerHour: function () {
+    this.custPerHour();
+    let cookiesBought = customers * this.avgPurchase;
+    return Math.ceil(cookiesBought);
   },
 };
 
@@ -18,9 +24,15 @@ let tokyoStore = {
   maxCustomer: 24,
   avgPurchase: 1.2,
   custPerHour: function () {
-    return Math.floor(
+    customers = Math.floor(
       Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer
     );
+    return customers;
+  },
+  cookiesPerHour: function () {
+    this.custPerHour();
+    let cookiesBought = customers * this.avgPurchase;
+    return Math.ceil(cookiesBought);
   },
 };
 
@@ -29,9 +41,15 @@ let dubaiStore = {
   maxCustomer: 38,
   avgPurchase: 3.7,
   custPerHour: function () {
-    return Math.floor(
+    customers = Math.floor(
       Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer
     );
+    return customers;
+  },
+  cookiesPerHour: function () {
+    this.custPerHour();
+    let cookiesBought = customers * this.avgPurchase;
+    return Math.ceil(cookiesBought);
   },
 };
 
@@ -40,9 +58,15 @@ let parisStore = {
   maxCustomer: 38,
   avgPurchase: 2.3,
   custPerHour: function () {
-    return Math.floor(
+    customers = Math.floor(
       Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer
     );
+    return customers;
+  },
+  cookiesPerHour: function () {
+    this.custPerHour();
+    let cookiesBought = customers * this.avgPurchase;
+    return Math.ceil(cookiesBought);
   },
 };
 
@@ -51,8 +75,14 @@ let limaStore = {
   maxCustomer: 16,
   avgPurchase: 4.6,
   custPerHour: function () {
-    return Math.floor(
+    customers = Math.floor(
       Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer
     );
+    return customers;
+  },
+  cookiesPerHour: function () {
+    this.custPerHour();
+    let cookiesBought = customers * this.avgPurchase;
+    return Math.ceil(cookiesBought);
   },
 };
