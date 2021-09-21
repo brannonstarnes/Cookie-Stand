@@ -1,0 +1,16 @@
+*{
+    background-color: rgb(190, 135, 144);
+}
+ul{
+    border: thin solid black;
+    display: inline-block;
+    max-width: 200px;
+    margin-bottom: 20px;
+    padding-bottom:10px ;
+    padding-left: 3%;
+}
+li {
+   margin-top: 10px;
+   align-content: center; 
+   padding-left: 10px;
+}
