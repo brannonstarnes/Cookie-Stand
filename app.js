@@ -69,13 +69,13 @@ Store.prototype.displaySales = function () {
   // tableEl.appendChild(blankHeader);};
 };
 
-function createTable(){ 
+function createTable(){
   for (let a = 0; a < allStores.length + 1; a++){
     if (a == 0){
       let newRow = document.createElement('tr');
       tableEl.appendChild(newRow);
       let blankHeader = document.createElement('th');
-      blankHeader.innerText = "____";
+      blankHeader.innerText = "";
       tableEl.appendChild(blankHeader);
       for (let i = 0; i <hoursOfOperation.length; i++){
         let newTH = document.createElement("th");
@@ -84,7 +84,7 @@ function createTable(){
       let totalTH = document.createElement('th');
       totalTH.innerText="Daily Location Total";
       tableEl.appendChild(totalTH);
-    } 
+    }
     if(a > 0){
       let newRow = document.createElement('tr');
       tableEl.appendChild(newRow);
@@ -95,10 +95,18 @@ function createTable(){
         let newTD = document.createElement("td");
         newTD.innerText = allStores[a-1].hourlySales[b];
         tableEl.appendChild(newTD);
-      } 
- 
+      }let totalTD = document.createElement('td');
+      totalTD.innerText= allStores[a-1].totalCookies;
+      tableEl.appendChild(totalTD);
     }
   }
+  let lastRow = document.createElement('tr');
+  tableEl.appendChild(lastRow);
+  let hourTotals = document.createElement('th');
+  hourTotals.innerText = "Totals";
+  tableEl.appendChild(hourTotals);
+  // for (c = 0; c < hoursOfOperation.length; c++){
+  // }
 }
 //     newItem.innerText = hoursOfOperation[i] + ": " + this.hourlySales[i];
 //     console.log(newItem);
