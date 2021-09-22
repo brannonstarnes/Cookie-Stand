@@ -99,24 +99,26 @@ function createTable(){
       totalTD.innerText= allStores[a-1].totalCookies;
       tableEl.appendChild(totalTD);
     }
-  }
-  let lastRow = document.createElement('tr');
+  }let lastRow = document.createElement('tr');
   tableEl.appendChild(lastRow);
   let hourTotals = document.createElement('th');
   hourTotals.innerText = "Totals";
   tableEl.appendChild(hourTotals);
-  // for (c = 0; c < hoursOfOperation.length; c++){
-  // }
+  //for each hour in store hours
+  let grandTotal = 0;
+  for (let hour = 0; hour < hoursOfOperation.length; hour++){
+  //for every hour sum the sales totals for every store
+    let sum = 0;
+    for (let store = 0; store < allStores.length; store++){
+      sum = sum + allStores[store].hourlySales[hour];
+      grandTotal = grandTotal + allStores[store].hourlySales[hour];
+    }let sumTD = document.createElement('td');
+    sumTD.innerText = sum;
+    tableEl.appendChild(sumTD);
+  } let totalTD = document.createElement('td');
+  totalTD.innerText = grandTotal;
+  tableEl.appendChild(totalTD);
 }
-//     newItem.innerText = hoursOfOperation[i] + ": " + this.hourlySales[i];
-//     console.log(newItem);
-//     newList.appendChild(newItem);
-//   }
-//   mainEl.appendChild(newList);
-//   let sumCookies = document.createElement("li");
-//   sumCookies.innerText = "Total: " + this.totalCookies + " cookies";
-//   newList.appendChild(sumCookies);
-// };
 
 
 let seattle = new Store('Seattle', 23, 65, 6.3);
@@ -134,7 +136,7 @@ tokyo.cookiesPerDay();
 //tokyo.displaySales();
 dubai.cookiesPerHour();
 dubai.cookiesPerDay();
-dubai.displaySales();
+//dubai.displaySales();
 paris.cookiesPerHour();
 paris.cookiesPerDay();
 //paris.displaySales();
