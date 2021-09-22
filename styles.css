@@ -14,3 +14,17 @@ li {
    align-content: center; 
    padding-left: 10px;
 }
+table{
+    border: thin solid black;
+}
+th{
+    border: thin solid black;
+}
+tr{
+    margin:0;
+}
+td{
+    border: thin solid black;
+    margin: 0;
+    justify-content: center;
+}
