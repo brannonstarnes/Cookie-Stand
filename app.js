@@ -2,7 +2,7 @@
 
 let mainEl = document.querySelector("main");
 let tableEl = document.querySelector("table");
-//let customers = 0;
+
 const hoursOfOperation = [
   "6am",
   "7am",
@@ -47,29 +47,8 @@ Store.prototype.cookiesPerDay = function (){
   }
 };
 
-// Store.prototype.simSales = function () {
-//   for (let i = 0; i < hoursOfOperation.length; i++) {
-//     let sales =
-//           hoursOfOperation[i] + ": " + this.cookiesPerHour() + " cookies";
-//          hourlySales.push(sales);
-//   }
-// };
-
-
-Store.prototype.displaySales = function () {
-  // let storeTitle = document.createElement("h2");
-  // storeTitle.innerText = this.location;
-  // mainEl.appendChild(storeTitle);
-  //let newList = document.createElement("li");
-  this.cookiesPerHour();
-  // let newRow = document.createElement('tr');
-  // tableEl.appendChild(newRow);
-  // let blankHeader = document.createElement('th');
-  // blankHeader.innerText = "______";
-  // tableEl.appendChild(blankHeader);};
-};
-
 function createTable(){
+  mainEl.appendChild(tableEl);
   for (let a = 0; a < allStores.length + 1; a++){
     if (a == 0){
       let newRow = document.createElement('tr');
@@ -99,7 +78,11 @@ function createTable(){
       totalTD.innerText= allStores[a-1].totalCookies;
       tableEl.appendChild(totalTD);
     }
-  }let lastRow = document.createElement('tr');
+  }
+}
+
+function finalRow(){
+  let lastRow = document.createElement('tr');
   tableEl.appendChild(lastRow);
   let hourTotals = document.createElement('th');
   hourTotals.innerText = "Totals";
@@ -130,25 +113,49 @@ let lima = new Store('Lima', 2, 16, 4.6);
 
 seattle.cookiesPerHour();
 seattle.cookiesPerDay();
-//seattle.displaySales();
+
 tokyo.cookiesPerHour();
 tokyo.cookiesPerDay();
-//tokyo.displaySales();
+
 dubai.cookiesPerHour();
 dubai.cookiesPerDay();
-//dubai.displaySales();
+
 paris.cookiesPerHour();
 paris.cookiesPerDay();
-//paris.displaySales();
+
 lima.cookiesPerHour();
 lima.cookiesPerDay();
-//lima.displaySales();
+
+
+
 createTable();
+finalRow();
 
-// function renderStores(){
-//   for(let i = 0; i < allStores.length; i++ ){
-//     allStores[i].displaySales();
-//   }
-// }
 
-//renderStores();
+
+
+//make variable for form element
+let formEl = document.getElementById("newStoreForm");
+
+
+function submitForm(formSubmission){
+  formSubmission.preventDefault();
+
+  let location = formSubmission.target.locationName.value;
+  let minCust = formSubmission.target.minCustomer.value;
+  let maxCust = formSubmission.target.maxCustomer.value;
+  let avgPurchase = formSubmission.target.avgPurch.value;
+
+  let store = new Store(location, minCust, maxCust, avgPurchase);
+  console.log(store);
+
+  store.cookiesPerHour();
+  store.cookiesPerDay();
+
+  tableEl.innerHTML = '';
+
+  createTable();
+  finalRow();
+}
+
+formEl.addEventListener('submit', submitForm);

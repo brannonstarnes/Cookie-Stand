@@ -100,13 +100,10 @@ section{
 
 }
 #featuredProd{
-    position: absolute;
-    top:85%;
-    left: 2em;
 }
 section p{
     background: none;
-    display: inline-block
+    display: inline-block;
 }
 #shirt{
     width: 350px;
@@ -117,6 +114,33 @@ section p{
     left:40%;
     box-sizing: border-box;
 }
-container{
+table{
     max-width: 100vw;
+    border: thin solid black;
+    margin:15px;
+}
+th{
+    border: thin solid black
+}
+td{
+    border: thin solid black
+}
+tr{
+    border: thin solid black
+}
+form{
+    display: flex;
+    max-width: 50vw;
+    height:100px;
+    margin-top: 40px;
+}
+container{
+    display: flex;
+    flex-direction: row;
+    max-width: 100vw;
+    height: 500px;
+}
+h1{
+    color:rgb(40, 112, 134);
+    font-size: xx-large;
 }

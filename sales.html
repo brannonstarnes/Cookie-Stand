@@ -5,14 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main>
       <h1>Sales Page</h1>
+      
       <table id="sales">
-
-      </table>
+      </table>  
+      
+      <form id="newStoreForm">
+        <fieldset>
+          <legend>Add A Store</legend>
+          
+          <label for="location">Store Location</label>
+          <input type="text" name="locationName">
+          <label for="minCust">Min Customers</label>
+          <input type="number" name="minCustomer">
+          <label for="maxCust">Max Customers</label>
+          <input type="number" name="maxCustomer">
+          <label for="avgPurchse">Avg Cookies Purchased</label>
+          <input type="number" name="avgPurch">
+          <input type="submit" name="submit" value="Add New Store">
+        </fieldset>
+      </form>
+      
     </main>
     <script src="app.js"></script>
   </body>
