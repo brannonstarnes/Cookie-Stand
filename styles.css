@@ -38,7 +38,45 @@ nav{
     z-index: 1;
 }
 #familyFun{
-    display:inline-block;
-    position: relative;
-    left:10%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    font-style:normal;
+    font-weight: bolder;
+    max-width: 520px;
+    z-index: 2;
+    display: inline-block;
+    position: absolute;
+    right:18%;
+    top:20%;
+    background:none;
+    color:rgb(233, 232, 182);
+}
+#wePresent{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    font-style: oblique;
+    font-weight: bolder;
+    max-width: 520px;
+    z-index: 2;
+    display: inline-block;
+    position: absolute;
+    right:58%;
+    top:20%;
+    background:none;
+    color:rgb(62, 177, 212);
+}
+#details{
+    display: inline-block;
+    font-size: xx-large;
+    max-width: 400px;
+    position:absolute;
+    right:8%;
+    top: 30%;
+    background:none;
+}
+#heroBlock{
+    display: block;
+}
+#frosted{
+    margin:40px
 }
