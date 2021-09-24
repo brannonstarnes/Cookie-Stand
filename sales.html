@@ -32,13 +32,13 @@
           <legend>Add A Store</legend>
           
           <label for="location">Store Location</label>
-          <input type="text" name="locationName">
+          <input type="text" name="locationName" required>
           <label for="minCust">Min Customers</label>
-          <input type="number" name="minCustomer">
+          <input type="number" name="minCustomer" required>
           <label for="maxCust">Max Customers</label>
-          <input type="number" name="maxCustomer">
+          <input type="number" name="maxCustomer" required>
           <label for="avgPurchse">Avg Cookies Purchased</label>
-          <input type="number" name="avgPurch">
+          <input type="number" step="0.1" name="avgPurch" required>
           <input type="submit" name="submit" value="Add New Store">
         </fieldset>
       </form>

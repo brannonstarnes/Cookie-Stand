@@ -131,11 +131,11 @@ lima.cookiesPerDay();
 createTable();
 finalRow();
 
-
-
+let formEl = document.getElementById("newStoreForm");
+formEl.addEventListener('submit', submitForm);
 
 //make variable for form element
-let formEl = document.getElementById("newStoreForm");
+
 
 
 function submitForm(formSubmission){
@@ -157,5 +157,4 @@ function submitForm(formSubmission){
   createTable();
   finalRow();
 }
-
 formEl.addEventListener('submit', submitForm);
