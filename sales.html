@@ -5,14 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <header> 
+        <img id="logo" alt="logo" src="https://raw.githubusercontent.com/codefellows/seattle-code-201d79/main/class-08/lab-b/assets/fish.jpg">
+        <nav>Salmon Cookies</nav>
+        <nav>Salmon Gifts</nav>
+        <nav>About</nav>
+        <nav>Contact Us</nav>
+        <a href="index.html" id="toPublic" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/home-button-icon-png-23.png" width="35" alt="Home Button Icon Png" /></a>
+    </header>
+    <heading id='salesHeading'>
+      <h1>Seattle Salmon Cookies Sales Page</h1>
+      
+   </heading>
     <main>
-      <h1>Sales Page</h1>
-      <table id="sales">
-
-      </table>
+      
+    <table id="sales">
+    </table>  
+      
+      <form id="newStoreForm">
+        
+        <fieldset>
+          <legend>Add A Store</legend>
+          
+          <label for="location">Store Location</label>
+          <input type="text" name="locationName">
+          <label for="minCust">Min Customers</label>
+          <input type="number" name="minCustomer">
+          <label for="maxCust">Max Customers</label>
+          <input type="number" name="maxCustomer">
+          <label for="avgPurchse">Avg Cookies Purchased</label>
+          <input type="number" name="avgPurch">
+          <input type="submit" name="submit" value="Add New Store">
+        </fieldset>
+      </form>
+      
     </main>
     <script src="app.js"></script>
   </body>
