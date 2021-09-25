@@ -1,5 +1,6 @@
+
 *{
-    background-color: rgb(201, 125, 138);
+    background-color: rgb(245, 180, 200);
     font-family: Arial, Helvetica, sans-serif;
     
 }
@@ -41,40 +42,43 @@ background: none;
     z-index: 1;
 }
 #familyFun{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: xx-large;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3em;
     font-style:normal;
     font-weight: bolder;
     max-width: 520px;
     z-index: 2;
-    display: inline-block;
-    position: absolute;
-    right:1%;
-    top:20%;
+    margin-top: 30px;
+    margin-right: 100px;
+    float: right;
     background:none;
-    color:rgb(189, 212, 62);
+    color:   rgb(40, 112, 134);
+    text-shadow: 2px 2px black;
 }
 #wePresent{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: xx-large;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3em;
     font-style: oblique;
     font-weight: bolder;
     max-width: 520px;
     z-index: 2;
     display: inline-block;
     position: absolute;
-    right:48%;
-    top:20%;
+    right:55%;
+    top:18%;
     background:none;
-    color:rgb(62, 177, 212);
+    color:rgb(52, 135, 160);
+    text-shadow: 2px 2px black;
 }
 #details{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 32px;
     display: inline-block;
     font-size: x-large;
     max-width: 300px;
     position:absolute;
-    right:.5%;
-    top: 30%;
+    right:8%;
+    top: 25%;
     background:none;
 }
 #heroBlock{
@@ -98,19 +102,22 @@ section{
     display: inline-block;
     background: none;
     font-size: xx-large;
-    background-color: grey;
+    font-weight: bold;
+    font-family:'Fjalla One', sans-serif;
+    color:rgb(40, 112, 134);
 }
 button{
     font-weight: bolder;
 }
 section p{
+    color: black;
     margin-top: 10px;
     line-height: normal;
     background: none;
     display: inline-block;
     font-size: larger;
     height: 300px;
-    background-color: rgb(40, 112, 134);
+    border: thin solid black
     
 }
 #shirt{
@@ -118,14 +125,9 @@ section p{
     height: 375px;
     border: thin solid black
 }
-/*#shirtSect{
-    display: inline-block;
-    position: relative;
-    left:40%;
-    box-sizing: border-box;
-}*/
 table{
     height: 375px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     }
 main{
     display: inline-flex;
@@ -142,7 +144,7 @@ th{
 td{
     border: thin solid black;
     padding:5px;
-    text-align: center;
+    text-align:center;
 }
 tr{
     border: thin solid black;
@@ -164,23 +166,29 @@ input{
     height: 500px;
     justify-content: center;
 }
-#featuredProd{
+ #featuredProd{
     width:400px;
-    height:450px;
+    height:300px;
+    position: relative;
     font-size: large;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 #tableSect{
     width: 350px;
-}
+    margin-right: 100px;
+} 
 #tableContainer{
     display: block;
+    margin-right: 30px;
     position: relative;
     bottom: 60px;
     margin: auto;
     display: flex;
     justify-content: center;
     max-height: 250px;
-    padding-right: 20px;
+    padding-right: 30px;
+    background-color:rgb(40, 112, 134);
 }
 legend{
     color: black;
@@ -202,6 +210,7 @@ fieldset{
     font-size: xx-large;
     font-weight: bold;
     padding: 20px;
+    font-family: 'Fjalla One', sans-serif;;
 }
 #toPublic{
     float: right;
@@ -209,10 +218,15 @@ fieldset{
     margin-bottom: 5px;
 }
 #testimonials{
-    padding-left: 20px;
+    margin:auto;
+    margin-top: 0;
+    text-align: right;
+    padding-right: 40px;
+    margin-left: 30px;
     font-size: xx-large;
     color:rgb(40, 112, 134);
     font-weight: bolder;
+    font-family:'Fjalla One', sans-serif;
 }
 blockquote{
     font-size: larger;
@@ -220,4 +234,6 @@ blockquote{
     max-width: 200px;
     font-weight: bolder;
     line-height: 200%;
+    padding: 10px;
+    vertical-align: center;
 }
