@@ -8,12 +8,13 @@ header{
     background-color: rgb(40, 112, 134);
     height:100px;
     max-width: 100vw;
+    border-bottom:medium solid mediumspringgreen;
 }
 #logo{
     width: 130px;
     height: 130px;
     border-radius: 70px ;
-    border: thin solid black;
+    border: medium solid mediumspringgreen;
     position: relative;
     left: 10%;
     z-index: 100;
@@ -32,36 +33,27 @@ nav{
 #toSales{
 background: none;
 }
-#family{
-    margin-top:10px;
-    display: inline-block;
-    position: relative;
-    left: 4%;
-    width: 820px;
-    height:460px;
-    z-index: 1;
-}
 #familyFun{
     font-family: 'Fjalla One', sans-serif;
-    font-size: 3em;
+    font-size: 1.5em;
     font-style:normal;
     font-weight: bolder;
-    max-width: 520px;
+    max-width: 100px;
     z-index: 2;
-    margin-top: 30px;
-    margin-right: 100px;
-    float: right;
+    margin-top: 20px;
+    margin-right: 0px;
+    line-height: 90%;
     background:none;
     color:   rgb(40, 112, 134);
     text-shadow: 2px 2px black;
 }
-#wePresent{
+#wePresent{ 
     font-family: 'Fjalla One', sans-serif;
     font-size: 3em;
     font-style: oblique;
     font-weight: bolder;
     max-width: 520px;
-    z-index: 2;
+    z-index: 100;
     display: inline-block;
     position: absolute;
     right:55%;
@@ -75,19 +67,27 @@ background: none;
     line-height: 32px;
     display: inline-block;
     font-size: x-large;
-    max-width: 300px;
+    max-width: 320px;
     position:absolute;
-    right:8%;
-    top: 25%;
+    right:5%;
+    top: 19%;
     background:none;
 }
 #heroBlock{
     display: block;
+    margin:5px;
+    margin-top: 0px;
+    height: 400px;
+    width:770px;
+    max-height: 400px;
 }
 #frosted{
     display: inline-block;
-    margin:10px;
+    height: 160px;
+    width: 280px;
     position: relative;
+    left: 0%;
+    border:medium solid mediumspringgreen;
 
 }
 section{
@@ -100,6 +100,8 @@ section{
 }
 #productsHead{
     display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
     background: none;
     font-size: xx-large;
     font-weight: bold;
@@ -108,22 +110,24 @@ section{
 }
 button{
     font-weight: bolder;
+    color: mediumspringgreen;
 }
 section p{
     color: black;
+    margin: 4px;
     margin-top: 10px;
     line-height: normal;
     background: none;
     display: inline-block;
     font-size: larger;
     height: 300px;
-    border: thin solid black
+    /* border: thin solid mediumspringgreen */
     
 }
 #shirt{
     width: 380px;
-    height: 375px;
-    border: thin solid black
+    height: 379px;
+    border: medium solid mediumspringgreen;
 }
 table{
     height: 375px;
@@ -138,16 +142,16 @@ main{
     max-height: 310px;
     }
 th{
-    border: medium solid black;
+    border: medium solid mediumspringgreen;
     padding: 5px;
 }
 td{
-    border: thin solid black;
+    border: medium solid mediumspringgreen;
     padding:5px;
     text-align:center;
 }
 tr{
-    border: thin solid black;
+    border: medium solid mediumspringgreen;
     padding:5px;
 }
 form{
@@ -163,16 +167,18 @@ input{
 }
 #featuredContainer{
     display: flex;
-    height: 500px;
+    height: 490px;
     justify-content: center;
 }
  #featuredProd{
     width:400px;
-    height:300px;
+    height:372px;
+    padding: 4px;
     position: relative;
     font-size: large;
     color: white;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    border: medium solid mediumspringgreen;
 }
 #tableSect{
     width: 350px;
@@ -189,6 +195,7 @@ input{
     max-height: 250px;
     padding-right: 30px;
     background-color:rgb(40, 112, 134);
+    border: medium solid mediumspringgreen;
 }
 legend{
     color: black;
@@ -220,20 +227,26 @@ fieldset{
 #testimonials{
     margin:auto;
     margin-top: 0;
-    text-align: right;
-    padding-right: 40px;
+    text-align: center;
     margin-left: 30px;
     font-size: xx-large;
     color:rgb(40, 112, 134);
     font-weight: bolder;
     font-family:'Fjalla One', sans-serif;
+    border: medium solid mediumspringgreen;
+    border-top: none;
+    padding:5px;
 }
 blockquote{
     font-size: larger;
+    color: white;
     background-color: rgb(40, 112, 134);
     max-width: 200px;
     font-weight: bolder;
     line-height: 200%;
     padding: 10px;
     vertical-align: center;
+    border: medium solid mediumspringgreen;
+    border-top: none;
+    border-bottom: none;
 }
